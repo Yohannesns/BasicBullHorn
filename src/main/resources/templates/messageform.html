@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<form action="#"
+      th:action="@{process}"
+      th:object="${message}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+    Content :<input type="text" th:field="*{content}" />
+    <span th:if="${#fields.hasErrors('content')}"
+           th:errors="*{content}"></span></br>
+
+    DatePosted:<input type="date" th:field="*{postedDate}" />
+    <span th:if="${#fields.hasErrors('postedDate')}"
+          th:errors="*{postedDate}"></span></br>
+
+    SentBy:<input type="text" th:field="*{sentBy}" />
+    <span th:if="${#fields.hasErrors('SentBy')}"
+          th:errors="*{SentBy}"></span></br>
+    <input type="submit" value="Submit" />
+
+    </form>
+</body>
+</html>

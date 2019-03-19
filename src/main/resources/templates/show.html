@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+
+<a href="/">Show All Message</a><br />
+Content:<span th:text="${message.content}" ></span><br />
+DatePosted:<span th:date="${message.postedDate}" ></span><br />
+SentBy:<span th:text="${message.sentBy}" ></span><br />
+
+</body>
+</html>
